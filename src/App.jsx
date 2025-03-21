@@ -13,6 +13,10 @@ import Mycourses from './Pages/Teacher/Mycourses'
 import Studentenroll from './Pages/Teacher/Studentenroll'
 import Home from './Pages/Student/Home'
 import Navbar from './components/Student/Navbar'
+import Contact from './Utility/Contact'
+import About from './Utility/About'
+import Login from './Utility/Login'
+import Registration from './Utility/Registration'
 
 function App() {
 
@@ -22,6 +26,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/course-list' element={<CourseList />}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/about' element={<About/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/registration' element={<Registration/>}></Route>
         <Route path='/course/:id' element={<Coursedetails />}></Route>
         <Route path='/my-enrollments' element={<Myenrollement />}></Route>
         <Route path='/player/:courseId' element={<Player />}></Route>
