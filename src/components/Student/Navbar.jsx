@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { assets } from '../../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
 import { CiSearch } from "react-icons/ci";
 import { RiMenu2Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import logoImage from '../../assets/LMS-removebg-preview.png'
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className='flex items-center justify-between gap-3 md:gap-0 '>
             <div className='flex items-center gap-2'>
                 <RiMenu2Fill className='md:hidden' onClick={() => setMenu(!menu)} ></RiMenu2Fill>
-                <Link to='/'><img className='w-20 md:w-30' src={assets.logo} alt="" /></Link>
+                <Link to='/'><img className='w-20 md:w-30' src={logoImage} alt="" /></Link>
             </div>
         
             {/* For Small Screen Menu Start */}
