@@ -15,8 +15,7 @@ const Navbar = ({data}) => {
         navigate('/course-list/' + input)
         // Using this I just reseting the input field.
         setInput('');
-        
-        
+          
     }
 
     return (
