@@ -1,9 +1,10 @@
 import React from 'react';
+import CourseSection from '../../components/Student/CourseSection';
 
 const CourseList = () => {
     return (
         <div>
-            <h2>Courselist page</h2>
+           <CourseSection/>
         </div>
     );
 };
