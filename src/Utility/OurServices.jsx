@@ -2,10 +2,10 @@ import React from 'react';
 import ml from '../assets/ml.png'
 import engineering from '../assets/engineer.png'
 import ux from '../assets/ux-design.png'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const OurServices = () => {
-    const navigate = useNavigate();
+    
     return (
         <div className='mt-10  '>
             <div className='flex text-xl gap-2 items-center justify-center text-center'>
