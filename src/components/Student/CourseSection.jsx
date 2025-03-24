@@ -6,6 +6,8 @@ import CourseCard from './CourseCard';
 const CourseSection = () => {
     const [showcourse, setShowCourse] = useState(false);
     const { courses } = useContext(ContextApi)
+
+   
     return (
         <div className='mt-10 py-10 lg:px-8  '>
             <h2 className='text-center text-3xl font-medium'>Our Courses</h2>
