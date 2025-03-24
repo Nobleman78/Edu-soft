@@ -17,6 +17,7 @@ import Contact from './Utility/Contact'
 import About from './Utility/About'
 import Login from './Utility/Login'
 import Registration from './Utility/Registration'
+import Footer from './components/Student/Footer'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           <Route path='student-enrolled' element={<Studentenroll />}></Route>
         </Route>
       </Routes>
+      <Footer/>
 
     </div>
   )
