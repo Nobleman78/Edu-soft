@@ -3,7 +3,7 @@ import contact from '../assets/contact.png'
 
 const Contact = () => {
     return (
-        <div className='border-t'>
+        <div className='border-t mt-10'>
             <div className='flex items-center text-center my-10 gap-2 justify-center text-3xl '>
                 <p><span className='text-gray-600'>CONTACT</span> <span className='font-semibold'>US</span></p>
                 <p className='w-8 sm:w-11 h-[1px] bg-black'></p>

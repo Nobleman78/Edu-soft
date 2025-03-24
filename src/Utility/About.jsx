@@ -3,7 +3,7 @@ import computer from '../assets/computer.jpeg'
 
 const About = () => {
     return (
-        <div>
+        <div className='mt-20'>
             <div className='flex items-center text-center my-10 gap-2 justify-center text-3xl '>
                 <p><span className='text-gray-600'>ABOUT</span> <span className='font-semibold'>US</span></p>
                 <p className='w-8 sm:w-11 h-[1px] bg-black'></p>
