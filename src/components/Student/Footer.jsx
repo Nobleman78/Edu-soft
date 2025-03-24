@@ -24,10 +24,10 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='flex flex-col lg:items-start item-center w-full lg:w-1/3 gap-4 '>
-                    <h2 className='text-xl text-center lg:text-start '>Subscribe to our newsletter</h2>
-                    <p className='w-60 md:w-full text-center lg:text-start'>The latest news, articles, and resources, sent to your inbox weekly.</p>
-                    <div className='flex gap-2'>
-                        <input className='border rounded outline-none w-40 md:w-full shadow-none px-2 py-1' type='text' placeholder='Enter Your Email'/>
+                    <h2 className='text-xl text-center lg:text-start  '>Subscribe to our newsletter</h2>
+                    <p className=' md:w-full text-center lg:text-start'>The latest news, articles, and resources, sent to your inbox weekly.</p>
+                    <div className='flex justify-center gap-2'>
+                        <input className='border rounded outline-none  md:w-full shadow-none px-2 py-1' type='text' placeholder='Enter Your Email'/>
                         <button className=' cursor-pointer hover:bg-blue-600 text-white px-2 py-1 rounded border-[#20B486] bg-[#20B486]'>Subscribe</button>
                     </div>
 

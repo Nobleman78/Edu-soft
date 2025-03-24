@@ -24,7 +24,7 @@ import SoftwareEngineering from './components/Courses/SoftwareEngineering'
 function App() {
 
   return (
-    <div className='px-10 py-5'>
+    <div className='px-5 md:px-10 py-5'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
