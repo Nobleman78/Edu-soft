@@ -18,6 +18,8 @@ import About from './Utility/About'
 import Login from './Utility/Login'
 import Registration from './Utility/Registration'
 import Footer from './components/Student/Footer'
+import Machinelearling from './components/Courses/Machinelearling'
+import SoftwareEngineering from './components/Courses/SoftwareEngineering'
 
 function App() {
 
@@ -27,7 +29,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/course-list' element={<CourseList />}></Route>
-        <Route path='/course-list/:input' element={<CourseList/>}t></Route>
+        <Route path='/course-list/:input' element={<CourseList/>}></Route>
+        <Route path='/machine-learning' element={<Machinelearling/>}></Route>
+        <Route path='/software-engineering' element={<SoftwareEngineering/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/login' element={<Login/>}></Route>

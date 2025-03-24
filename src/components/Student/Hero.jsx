@@ -4,7 +4,7 @@ import Searchbar from './Searchbar';
 
 const Hero = () => {
     return (
-        <div className='mt-10  '>
+        <div className='mt-20  '>
             <div className='flex flex-col md:flex-row justify-between gap-20'>
                 <div className='w-[100%] md:w-[50%]'>
                     <h1 className='text-2xl md:text-5xl mb-5 text-bold mt-10 md:ms-0'>Up Your <span className='text-[#20B486]'>Skills</span> To <span className='text-[#20B486]'>Advance</span> Your <span className='text-[#20B486]'>Career</span> Path</h1>

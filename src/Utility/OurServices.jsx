@@ -2,8 +2,10 @@ import React from 'react';
 import ml from '../assets/ml.png'
 import engineering from '../assets/engineer.png'
 import ux from '../assets/ux-design.png'
+import { Link, useNavigate } from 'react-router-dom';
 
 const OurServices = () => {
+    const navigate = useNavigate();
     return (
         <div className='mt-10  '>
             <div className='flex text-xl gap-2 items-center justify-center text-center'>
@@ -19,7 +21,7 @@ const OurServices = () => {
                         </div>
                         <div className='mt-4'>
                             <p className=' mt-10'> Machine learing focus of building system capable of learing from data.</p>
-                            <button className='mt-5 text-white cursor-pointer bg-[#20B486] px-3 py-1 w-full rounded '>Explore</button>
+                            <Link to ='/machine-learning'> <button className='mt-5 text-white cursor-pointer bg-[#20B486] px-3 py-1 w-full rounded '>Explore</button></Link>
                         </div>
                     </div>
                     <div className='px-4 py-4 rounded-xl bg-blue-200'>
@@ -29,7 +31,7 @@ const OurServices = () => {
                         </div>
                         <div className='mt-4'>
                             <p className=' mt-10'> Machine learing focus of building system capable of learing from data.</p>
-                            <button className='mt-5 text-white cursor-pointer px-4 py-1 w-full rounded bg-blue-600 ' >Explore</button>
+                            <Link to='/software-engineering'><button className='mt-5 text-white cursor-pointer px-4 py-1 w-full rounded bg-blue-600 ' >Explore</button></Link>
                         </div>
                     </div>
                     <div className='px-4 py-4  rounded-xl bg-amber-200'>

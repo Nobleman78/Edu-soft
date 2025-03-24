@@ -19,7 +19,7 @@ const Navbar = ({ data }) => {
     }
 
     return (
-        <div className='flex items-center justify-between gap-1 md:gap-0 '>
+        <div className='flex items-center justify-between gap-1 md:gap-0 top-0 bg-white fixed z-50 md:w-[90%] lg:w-[95%] '>
             {/* Nav logo Start*/}
             <div className='flex items-center gap-2'>
                 <RiMenu2Fill className='md:hidden' onClick={() => setMenu(!menu)} ></RiMenu2Fill>

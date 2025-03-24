@@ -6,7 +6,7 @@ import CourseCard from '../../components/Student/CourseCard';
 const CourseList = () => {
     const { courses } = useContext(ContextApi)
     return (
-        <div>
+        <div className='mt-10 md:mt-12'>
             <h2 className='text-4xl font-semibold'>Course list</h2>
             <p><Link to='/'><span className='text-blue-600'>Home</span> </Link>/<span className='text-gray-500'> Course list</span></p>
             <div className='mt-10 py-10 lg:px-8  '>
