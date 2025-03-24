@@ -22,7 +22,11 @@ const CourseSection = () => {
                         </div>
                 }
             </div>
-            <Link className='flex justify-center mx-auto w-50 bg-[#20B486] text-white px-10 py-3 rounded' to='/course-list' onClick={() =>(setShowCourse(!showcourse))}>Show all courses</Link>
+           <div>
+            {
+                showcourse === true?'': <Link className='flex justify-center mx-auto w-50 bg-[#20B486] text-white px-10 py-3 rounded' to='/course-list' onClick={() => {scrollTo(0, 0);setShowCourse(!showcourse);}}>Show all courses</Link>
+            }
+           </div>
 
         </div>
     );
