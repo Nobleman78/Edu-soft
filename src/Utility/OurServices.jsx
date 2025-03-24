@@ -41,7 +41,7 @@ const OurServices = () => {
                         </div>
                         <div className='mt-4'>
                             <p className='mt-10'> Machine learing focus of building system capable of learing from data.</p>
-                            <button className='mt-5 px-4 py-1 text-white cursor-pointer bg-amber-500 w-full rounded'>Explore</button>
+                            <Link to='/UI-UX'><button className='mt-5 px-4 py-1 text-white cursor-pointer bg-amber-500 w-full rounded'>Explore</button></Link>
                         </div>
                     </div>
 

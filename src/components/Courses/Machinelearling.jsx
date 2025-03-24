@@ -2,7 +2,7 @@ import React from 'react';
 
 const Machinelearling = () => {
     return (
-        <div className='mt-10 flex flex-col gap-3 '>
+        <div className='mt-20 flex flex-col gap-3 '>
             <h2 className='text-xl font-semibold'>AI ML DS - How To Get Started?</h2>
             <p className='tetx-sm text-gray-500'>Last Updated : 16 Dec,2024</p>
             <hr />
@@ -10,7 +10,7 @@ const Machinelearling = () => {
             <h1 className='text-2xl'>Data Science</h1>
             <p>Data Science combines statistical and computational tools to process and analyze large amounts of data. DS practitioners use their insights from data to inform decisions, predict trends, and improve the effectiveness of processes.</p>
 
-             <p>Content will be updated soon............ Still Working ......</p>
+             <p className='text-2xl font-bold'>Content will be updated soon............ Still Working ......</p>
         </div>
     );
 };

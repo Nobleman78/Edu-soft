@@ -20,6 +20,7 @@ import Registration from './Utility/Registration'
 import Footer from './components/Student/Footer'
 import Machinelearling from './components/Courses/Machinelearling'
 import SoftwareEngineering from './components/Courses/SoftwareEngineering'
+import UiUx from './components/Courses/UiUx'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/course-list/:input' element={<CourseList/>}></Route>
         <Route path='/machine-learning' element={<Machinelearling/>}></Route>
         <Route path='/software-engineering' element={<SoftwareEngineering/>}></Route>
+        <Route path='/UI-UX' element={<UiUx/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
