@@ -21,7 +21,7 @@ const OurServices = () => {
                         </div>
                         <div className='mt-4'>
                             <p className=' mt-10'> Machine learing focus of building system capable of learing from data.</p>
-                            <Link to ='/machine-learning'> <button className='mt-5 text-white cursor-pointer bg-[#20B486] px-3 py-1 w-full rounded '>Explore</button></Link>
+                            <Link  onClick={()=>scrollTo(0,0)} to ='/machine-learning'> <button className='mt-5 text-white cursor-pointer bg-[#20B486] px-3 py-1 w-full rounded '>Explore</button></Link>
                         </div>
                     </div>
                     <div className='px-4 py-4 rounded-xl bg-blue-200'>
@@ -31,7 +31,7 @@ const OurServices = () => {
                         </div>
                         <div className='mt-4'>
                             <p className=' mt-10'> Machine learing focus of building system capable of learing from data.</p>
-                            <Link to='/software-engineering'><button className='mt-5 text-white cursor-pointer px-4 py-1 w-full rounded bg-blue-600 ' >Explore</button></Link>
+                            <Link onClick={()=>scrollTo(0,0)} to='/software-engineering'><button className='mt-5 text-white cursor-pointer px-4 py-1 w-full rounded bg-blue-600 ' >Explore</button></Link>
                         </div>
                     </div>
                     <div className='px-4 py-4  rounded-xl bg-amber-200'>
@@ -41,7 +41,7 @@ const OurServices = () => {
                         </div>
                         <div className='mt-4'>
                             <p className='mt-10'> Machine learing focus of building system capable of learing from data.</p>
-                            <Link to='/UI-UX'><button className='mt-5 px-4 py-1 text-white cursor-pointer bg-amber-500 w-full rounded'>Explore</button></Link>
+                            <Link  onClick={()=>scrollTo(0,0)} to='/UI-UX'><button className='mt-5 px-4 py-1 text-white cursor-pointer bg-amber-500 w-full rounded'>Explore</button></Link>
                         </div>
                     </div>
 
