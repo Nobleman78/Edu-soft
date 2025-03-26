@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.25.0",
     "@tailwindcss/vite": "^4.0.14",
+    "dompurify": "^3.2.4",
     "humanize-duration": "^3.32.1",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
@@ -21,6 +22,7 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.4.0",
+    "react-youtube": "^10.1.0",
     "sort-by": "^1.2.0",
     "uniqid": "^5.4.0"
   },

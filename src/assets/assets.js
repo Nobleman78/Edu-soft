@@ -215,7 +215,7 @@ export const dummyCourses = [
     {
         "_id": "605c72efb3f1c2b1f8e4e1a1",
         "courseTitle": "Introduction to JavaScript",
-        "courseDescription": "Learn the Basics of JavaScript<p>JavaScript is a versatile programming language that powers the web. In this course, you will learn the fundamentals of JavaScript, including syntax, data types, and control structures.</p><p>This course is perfect for beginners who want to start their journey in web development. By the end of this course, you will be able to create interactive web pages and understand the core concepts of JavaScript.</p><ul><li>Understand the basics of programmingLearn how to manipulate the DOMCreate dynamic web applications",
+        "courseDescription": "Learn the Basics of JavaScript<p>JavaScript is a versatile programming language that powers the web. In this course, you will learn the fundamentals of JavaScript, including syntax, data types, and control structures.",
         "coursePrice": 49.99,
         "isPublished": true,
         "discount": 20,
@@ -229,7 +229,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "What is JavaScript?",
                         "lectureDuration": 16,
-                        "lectureUrl": "https://youtu.be/CBWnBi-awSA",
+                        "lectureUrl": "https://youtu.be/rePN-VFo1Eo",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -302,7 +302,7 @@ export const dummyCourses = [
                         "lectureId": " lecture1",
                         "lectureTitle": "Lists and Tuples",
                         "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureUrl": "https://youtu.be/Ri1Lgdew8Ds",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -374,7 +374,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Cybersecurity?",
                         "lectureDuration": 10,
-                        "lectureUrl": "https://youtu.be/samplelink5",
+                        "lectureUrl": "https://youtu.be/lpa8uy4DyMo",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -417,7 +417,19 @@ export const dummyCourses = [
             "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
             "user_2qjlgkAqIMpiR2flWIRzvWKtE0w"
         ],
-        "courseRatings": [],
+        "courseRatings": [
+            {
+                "rating": 5
+                
+
+            },
+            {
+                "rating":5
+            },
+            {"rating":4},
+            {"rating":3},
+            {"rating":2}
+        ],
         "createdAt": "2024-12-27T11:30:00.000Z",
         "updatedAt": "2024-12-31T04:14:49.773Z",
         "__v": 2,
@@ -506,7 +518,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Cloud Computing?",
                         "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "https://youtu.be/2LaAJq1lB1Q",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -571,7 +583,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "Python Basics",
                         "lectureDuration": 30,
-                        "lectureUrl": "https://youtu.be/samplelink1",
+                        "lectureUrl": "https://youtu.be/9R3X0JoCLyU",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -644,7 +656,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Data Science?",
                         "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "https://youtu.be/7IgVGSaQPaw",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },

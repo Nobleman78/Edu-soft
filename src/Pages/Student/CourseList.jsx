@@ -1,15 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
-
 import { ContextApi } from '../../Context/Context';
 import CourseCard from '../../components/Student/CourseCard';
-import { CiSearch } from "react-icons/ci";
-import { FiFilter } from 'react-icons/fi';
 import Searchbar from '../../components/Student/Searchbar';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { RxCross2 } from "react-icons/rx";
 
 const CourseList = () => {
     const { courses } = useContext(ContextApi)
     const {input } = useParams();
+    const navigate = useNavigate()
    
 
     // Course Filter
@@ -36,9 +35,14 @@ const CourseList = () => {
                     <p className='text-center md:text-start'><Link to='/'><span className='text-blue-600'>Home</span> </Link>/<span className='text-gray-500'> Course list</span></p>
                 </div>
                 <Searchbar data={input}/>
-
-
             </div>
+            {
+                input && <div className='px-8 mt-4 flex relative'>
+                    <p className='px-2 py-1 border w-30 text-start'>{input}</p>
+                    <RxCross2 onClick={()=>navigate('/course-list')} className='absolute left-30 top-1 cursor-pointer'/>
+                </div>
+              
+            }
             <div className='mt-10 py-10 lg:px-8  '>
                 <div>
                     {
