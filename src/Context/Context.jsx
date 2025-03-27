@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { dummyCourses } from '../assets/assets';
 import humanizeDuration from 'humanize-duration';
-
+import { addToLocalStorage, getCourseFromLocalStorage } from '../components/PrivateRoute/Localstorage';
 export const ContextApi = createContext();
 const Context = (props) => {
 
@@ -10,48 +10,56 @@ const Context = (props) => {
     const [iseducator, setIsEducator] = useState(true)
     const [enrollCourses, setEnrollCourses] = useState([])
     const [cart, setCart] = useState([])
-    console.log(cart)
+
+    // Add to cart Functionality
+    const addtoCart = (courseData) => {
+        let isPresent = false;
+        // In this code i am trying to find that is the course is already 
+        // in the cart then it will not added anymore
+        cart.find(item => {
+            if (item._id === courseData._id) {
+                isPresent = true;
+            }
+            if(item._id === courseData._id){
+                alert('This course is already added')
+            }
+        })
+        // If the course is not in the cart then it will added
+        if(isPresent){
+            return ;
+        }
+        setCart([...cart,courseData])
+        addToLocalStorage(courseData)
+    }
+
+    // For Mounting localstorage data that does not remove after refreshing of web page.
+    useEffect(() => {
+        const getDataFromLocalStorage = getCourseFromLocalStorage();
+        if (getDataFromLocalStorage) {
+            setCart(getDataFromLocalStorage)
+        }
+
+    }, [])
+
+    //Course Data
+    const courseData = async () => {
+        setCourses(dummyCourses)
+    }
+
+    //Calculation Total Price
+
     const calculateTotalPrice = () => {
-        return cart.reduce((total, item) => total + item.coursePrice, 0);
+        return cart.reduce((total, item) => total + item.coursePrice, 0).toFixed(2);
     };
+
+
+    // Calculates Total Price Discount
+
     const calculateTotalDiscountPrice = (discount) => {
         const TotalPrice = calculateTotalPrice();
         let discountPrice = TotalPrice - (TotalPrice * (discount / 100))
         return discountPrice.toFixed(2);
     }
-
-
-
-
-    const addtoCart = (courseData) => {
-        console.log(courseData)
-        let isPresent = false;
-        cart.find(item => {
-            if (item._id === courseData._id) {
-                isPresent = true;
-            }
-            if (item._id === courseData._id) {
-                alert('This item is already exist')
-            }
-
-        })
-        if (isPresent)
-            return;
-
-        setCart([...cart, courseData])
-
-    }
-
-
-
-
-
-
-    const courseData = async () => {
-        setCourses(dummyCourses)
-    }
-
-
 
 
     //Function to calculates Course Chapter Duration Duration
@@ -121,7 +129,7 @@ const Context = (props) => {
     const contextValue = {
         currency, courses, calculateRating, iseducator, setIsEducator,
         calculateChapterTime, calculateNumberOfLecture, calculateCourseTime, calculateDiscount
-        , enrollCourses, addtoCart, calculateTotalPrice, cart,calculateTotalDiscountPrice
+        , enrollCourses, addtoCart, calculateTotalPrice, cart, calculateTotalDiscountPrice
     }
     return (
         <ContextApi.Provider value={contextValue}>

@@ -9,7 +9,7 @@ import { ContextApi } from '../../Context/Context';
 
 const Navbar = ({ data }) => {
     const navigate = useNavigate();
-    const {cart} = useContext(ContextApi);
+    const {cart,lsCourseData} = useContext(ContextApi);
     const [menu, setMenu] = useState(false);
     const [input, setInput] = useState(data ? data : '');
 

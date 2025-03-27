@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { ContextApi } from '../Context/Context';
 
+
 const Cart = () => {
-    const { cart, calculateCourseTime, calculateTotalDiscountPrice, calculateTotalPrice, calculateDiscount } = useContext(ContextApi);
+    const {calculateCourseTime,cart, calculateTotalDiscountPrice, calculateTotalPrice, calculateDiscount } = useContext(ContextApi);
+  
     return (
         <div className='mt-20'>
             <h2 className='text-4xl font-semibold mb-2'>Shopping Cart</h2>
@@ -42,9 +44,6 @@ const Cart = () => {
                     <p className='text-3xl text-blue-600'>{calculateTotalDiscountPrice(20)}</p>
                     <p className='line-through' >{calculateTotalPrice()}</p>
                     <p>20% Off</p>
-                   
-
-
                 </div>
             </div>
         </div>

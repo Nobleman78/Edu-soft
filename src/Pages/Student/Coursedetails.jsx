@@ -7,6 +7,8 @@ import humanizeDuration from 'humanize-duration';
 import YouTube from 'react-youtube';
 import Loading from '../../components/Student/Loading';
 import Myenrollement from './Myenrollement';
+import { addToLocalStorage } from '../../components/PrivateRoute/Localstorage';
+
 
 const Coursedetails = () => {
 
