@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { CiSearch } from "react-icons/ci";
 import { RiMenu2Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import logoImage from '../../assets/LMS-removebg-preview.png'
+import { IoCartOutline } from "react-icons/io5";
+import { ContextApi } from '../../Context/Context';
 
 const Navbar = ({ data }) => {
     const navigate = useNavigate();
+    const {cart} = useContext(ContextApi);
     const [menu, setMenu] = useState(false);
     const [input, setInput] = useState(data ? data : '');
 
@@ -19,7 +22,7 @@ const Navbar = ({ data }) => {
     }
 
     return (
-        <div className='flex items-center gap-6 justify-between  md:gap-0 top-0 bg-white fixed  z-50 md:w-[90%] lg:w-[95%] '>
+        <div className='flex items-center gap-5 justify-between  md:gap-0 top-0 bg-white fixed  z-50 md:w-[90%] lg:w-[95%] '>
             {/* Nav logo Start*/}
             <div className='flex items-center gap-3.5'>
                 <RiMenu2Fill className='md:hidden' onClick={() => setMenu(!menu)} ></RiMenu2Fill>
@@ -85,6 +88,8 @@ const Navbar = ({ data }) => {
             {/* Login Navbar */}
             <div>
                 <ul className='flex items-center gap-4'>
+                    <NavLink to='/cart'><IoCartOutline ></IoCartOutline></NavLink>
+                    <p className='absolute right-[75px] top-[20px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>{cart.length}</p>
                     <NavLink to='/login' className='cursor-pointer text-sm bg-[#20B486]  text-white px-2 py-2 md:px-3 md:py-1  md:text-base rounded'>Sign in</NavLink>
 
                 </ul>

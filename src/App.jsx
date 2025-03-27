@@ -21,6 +21,8 @@ import Footer from './components/Student/Footer'
 import Machinelearling from './components/Courses/Machinelearling'
 import SoftwareEngineering from './components/Courses/SoftwareEngineering'
 import UiUx from './components/Courses/UiUx'
+import Cart from './Utility/Cart'
+
 
 function App() {
 
@@ -37,6 +39,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
         <Route path='/registration' element={<Registration/>}></Route>
         <Route path='/course/:id' element={<Coursedetails />}></Route>
         <Route path='/my-enrollments' element={<Myenrollement />}></Route>

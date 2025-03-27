@@ -1,19 +1,61 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { dummyCourses } from '../assets/assets';
 import humanizeDuration from 'humanize-duration';
+
 export const ContextApi = createContext();
 const Context = (props) => {
 
     const currency = '$';
     const [courses, setCourses] = useState([])
     const [iseducator, setIsEducator] = useState(true)
+    const [enrollCourses, setEnrollCourses] = useState([])
+    const [cart, setCart] = useState([])
+    console.log(cart)
+    const calculateTotalPrice = () => {
+        return cart.reduce((total, item) => total + item.coursePrice, 0);
+    };
+    const calculateTotalDiscountPrice = (discount) => {
+        const TotalPrice = calculateTotalPrice();
+        let discountPrice = TotalPrice - (TotalPrice * (discount / 100))
+        return discountPrice.toFixed(2);
+    }
+
+
+
+
+    const addtoCart = (courseData) => {
+        console.log(courseData)
+        let isPresent = false;
+        cart.find(item => {
+            if (item._id === courseData._id) {
+                isPresent = true;
+            }
+            if (item._id === courseData._id) {
+                alert('This item is already exist')
+            }
+
+        })
+        if (isPresent)
+            return;
+
+        setCart([...cart, courseData])
+
+    }
+
+
+
+
+
 
     const courseData = async () => {
         setCourses(dummyCourses)
     }
 
+
+
+
     //Function to calculates Course Chapter Duration Duration
- 
+
     const calculateChapterTime = (chapter) => {
         let time = 0;
         chapter.chapterContent.map(lecture =>
@@ -48,7 +90,7 @@ const Context = (props) => {
     }
     // Calculate Total Rating
 
- 
+
 
     const calculateRating = (course) => {
         if (course.courseRatings.length === 0) {
@@ -70,14 +112,16 @@ const Context = (props) => {
 
 
 
-
+    //    Fetching Data here
     useEffect(() => {
         courseData()
+
     }, [])
 
     const contextValue = {
         currency, courses, calculateRating, iseducator, setIsEducator,
-        calculateChapterTime, calculateNumberOfLecture, calculateCourseTime,calculateDiscount
+        calculateChapterTime, calculateNumberOfLecture, calculateCourseTime, calculateDiscount
+        , enrollCourses, addtoCart, calculateTotalPrice, cart,calculateTotalDiscountPrice
     }
     return (
         <ContextApi.Provider value={contextValue}>

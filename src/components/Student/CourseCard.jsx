@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
     const {currency,calculateRating} = useContext(ContextApi)
-    console.log(currency);
     return (
         <Link to={'/course/' + course._id} className=' border
         border-gray-500/30 pb-6 overflow-hidden rounded-lg'>

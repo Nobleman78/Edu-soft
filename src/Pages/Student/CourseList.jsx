@@ -13,7 +13,7 @@ const CourseList = () => {
 
     // Course Filter
     const [filterCourse,setFilterCourse] = useState([]);
-    console.log(filterCourse)
+
 
     useEffect(()=>{
         if(courses.length > 0){

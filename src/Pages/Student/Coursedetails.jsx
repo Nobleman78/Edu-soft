@@ -1,21 +1,23 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ContextApi } from '../../Context/Context';
 import DOMPurify from 'dompurify';
 import { assets } from '../../assets/assets';
 import humanizeDuration from 'humanize-duration';
 import YouTube from 'react-youtube';
 import Loading from '../../components/Student/Loading';
+import Myenrollement from './Myenrollement';
 
 const Coursedetails = () => {
 
-    const { courses, calculateRating, calculateCourseTime, calculateDiscount, calculateNumberOfLecture, calculateChapterTime } = useContext(ContextApi)
+    const { courses, calculateRating,calculateCourseTime, addtoCart, calculateDiscount, calculateNumberOfLecture, calculateChapterTime } = useContext(ContextApi)
     const { id } = useParams();
     const [courseData, setCourseData] = useState(null)
     const [arrowFlip, setArrowFlip] = useState({});
     const [enrollButton, setEnrollButton] = useState(false);
     const [playerData, setPlayerData] = useState(null);
-    console.log(courseData);
+  
+
 
     const toggleSection = (index) => {
         setArrowFlip(prev => (
@@ -157,7 +159,7 @@ const Coursedetails = () => {
                         </div>
                         {/*--------Star, total course duration and total lectures part emd-------- */}
 
-                        <button className='bg-blue-600 w-full px-4 py-2 mt-3 cursor-pointer text-white rounded'>{enrollButton ? 'Already Enrolled' : 'Enroll Now'}</button>
+                       <Link to='/cart'> <button  onClick={()=>addtoCart(courseData)} className='bg-blue-600 w-full px-4 py-2 mt-3 cursor-pointer text-white rounded'>{enrollButton ? 'Already Enrolled' : 'Enroll Now'}</button></Link>
 
                         {/*--------- Ends part------- */}
 
