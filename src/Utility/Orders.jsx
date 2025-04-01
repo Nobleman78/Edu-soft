@@ -52,7 +52,7 @@ const Orders = () => {
 
                         </div>
                         <div className='flex w-10 '>
-                            
+
                             <img src={cardamex} alt="" />
                             <img src={visacard} alt="" />
                             <img src={masterCard} alt="" />
@@ -61,8 +61,8 @@ const Orders = () => {
                         </div>
                     </div>
                     {/* Paypal Method */}
-                    <div>
-
+                    <div className='mt-10'>
+                        <h2 className='text-2xl text-red-400'>This section is uder development.............</h2>
                     </div>
                 </div>
 
