@@ -12,10 +12,10 @@ const Navbar = ({ data }) => {
     const { cart, lsCourseData } = useContext(ContextApi);
     const [menu, setMenu] = useState(false);
     const [input, setInput] = useState(data ? data : '');
+
     const closeMenu = () => {
         setMenu(false);
     };
-
     const formHandler = (e) => {
         e.preventDefault();
         navigate('/course-list/' + input)
@@ -39,7 +39,7 @@ const Navbar = ({ data }) => {
                 <div className='flex flex-col h-full p-6'>
                     <div className='flex justify-between items-center mb-8'>
                         <img className='h-8 w-auto' src={logoImage} alt="LMS Logo" />
-                        <button onClick={closeMenu} className='text-2xl focus:outline-none' aria-label="Close menu"  >
+                        <button onClick={()=>setMenu(false)} className='text-2xl focus:outline-none' aria-label="Close menu"  >
                             <RxCross2 />
                         </button>
                     </div>

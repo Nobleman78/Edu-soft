@@ -34,7 +34,7 @@ const CourseList = () => {
                     <h2 className='text-4xl font-semibold'>Course list</h2>
                     <p className='text-center md:text-start'><Link to='/'><span className='text-blue-600'>Home</span> </Link>/<span className='text-gray-500'> Course list</span></p>
                 </div>
-                <Searchbar data={input}/>
+                <Searchbar />
             </div>
             {
                 input && <div className='px-8 mt-4 flex relative'>
