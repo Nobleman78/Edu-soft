@@ -45,7 +45,7 @@ const Cart = () => {
                     <p className='text-3xl text-blue-600'>{calculateTotalDiscountPrice(20)}</p>
                     <p className='line-through' >{calculateTotalPrice()}</p>
                     <p>20% Off</p>
-                    <Link to='/orders'>  <button className='bg-blue-500 mt-3 px-3 py-2 w-full cursor-pointer text-white '>Proceed To CheckOut</button></Link>
+                    <Link to='/orders'>  <button className='bg-green-700 mt-3 px-3 py-2 w-full cursor-pointer text-white '>Proceed To CheckOut</button></Link>
                 </div>
             </div>
 

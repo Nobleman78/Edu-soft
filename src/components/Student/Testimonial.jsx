@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets';
 const Testimonial = () => {
     return (
         <div className='mt-10'>
-            <h2 className='text-center text-3xl'>Testimonials</h2>
+            <h2 className='text-center text-3xl font-semibold'>Testimonials</h2>
             <p className='mt-3 text-justify lg:w-[80%] mx-auto'>Hear from our learners as they share their journeys of transformation, success, and how our
                 platform has made a difference in their lives.</p>
             <div className=' grid grid-cols-1 lg:grid-cols-3 gap-4 mt-15 w-[90%] mx-auto '>

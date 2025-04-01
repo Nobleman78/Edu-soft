@@ -16,7 +16,7 @@ const Searchbar = ({data}) => {
                 <CiSearch className='md:w-auto w-10 px-3 text-xl' />
                 <input onChange={(e)=>setInput(e.target.value)} value={input} className=' outline-none shadow-none w-100' type="text" placeholder='Search here' />
             </div>
-            <button className='bg-[#20b486] rounded px-7 md:px-10 py-3 mx-1 md:py-3 absolute right-[-4px] text-white'>Search</button>
+            <button className='bg-green-800 rounded cursor-pointer px-7 md:px-10 py-3 mx-1 md:py-3 absolute right-[-4px] text-white'>Search</button>
 
         </form>
 

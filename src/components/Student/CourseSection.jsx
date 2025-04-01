@@ -26,7 +26,7 @@ const CourseSection = () => {
             </div>
            <div>
             {
-                showcourse === true?'': <Link className='flex justify-center mx-auto w-50 hover:bg-blue-600 bg-[#20B486] text-white px-10 py-3 rounded' to='/course-list' onClick={() => {scrollTo(0, 0);setShowCourse(!showcourse);}}>Show all courses</Link>
+                showcourse === true?'': <Link className='flex justify-center mx-auto w-50 hover:bg-blue-600 bg-green-700 text-white px-10 py-3 rounded' to='/course-list' onClick={() => {scrollTo(0, 0);setShowCourse(!showcourse);}}>Show all courses</Link>
             }
            </div>
 
