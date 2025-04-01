@@ -24,8 +24,7 @@ const Coursedetails = () => {
     const toggleSection = (index) => {
         setArrowFlip(prev => (
             {
-                ...prev,
-                [index]: !prev[index]
+                ...prev,[index]: !prev[index]
             }
         ));
 

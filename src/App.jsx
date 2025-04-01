@@ -22,6 +22,7 @@ import Machinelearling from './components/Courses/Machinelearling'
 import SoftwareEngineering from './components/Courses/SoftwareEngineering'
 import UiUx from './components/Courses/UiUx'
 import Cart from './Utility/Cart'
+import Orders from './Utility/Orders'
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path='/about' element={<About/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
+        <Route path='/orders' element={<Orders/>}></Route>
         <Route path='/registration' element={<Registration/>}></Route>
         <Route path='/course/:id' element={<Coursedetails />}></Route>
         <Route path='/my-enrollments' element={<Myenrollement />}></Route>
