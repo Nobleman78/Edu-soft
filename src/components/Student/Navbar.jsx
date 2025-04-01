@@ -9,48 +9,65 @@ import { ContextApi } from '../../Context/Context';
 
 const Navbar = ({ data }) => {
     const navigate = useNavigate();
-    const {cart,lsCourseData} = useContext(ContextApi);
+    const { cart, lsCourseData } = useContext(ContextApi);
     const [menu, setMenu] = useState(false);
     const [input, setInput] = useState(data ? data : '');
+    const closeMenu = () => {
+        setMenu(false);
+    };
 
     const formHandler = (e) => {
         e.preventDefault();
         navigate('/course-list/' + input)
-        // Using this I just reseting the input field.
         setInput('');
 
     }
 
     return (
-        <div className='flex items-center gap-5 justify-between  md:gap-0 top-0 bg-white fixed  z-50 md:w-[90%] lg:w-[95%] '>
+        <div className='flex items-center gap-5 justify-between px-4 md:px-6 lg:px-8 w-auto top-0 bg-white sticky  z-50  '>
             {/* Nav logo Start*/}
-            <div className='flex items-center gap-3.5'>
-                <RiMenu2Fill className='md:hidden' onClick={() => setMenu(!menu)} ></RiMenu2Fill>
-                <Link to='/'><img className='w-20 md:w-30' src={logoImage} alt="" /></Link>
-            </div>
+
+            <RiMenu2Fill className='md:hidden text-xl' onClick={() => setMenu(!menu)} ></RiMenu2Fill>
+            <Link to='/'><img className='w-20 md:w-30' src={logoImage} alt="" /></Link>
+
             {/* Nav logo End */}
 
-            {/* For Small Screen Menu Start */}
-            <div className={`absolute top-0 left-0 bottom-0  overflow-hidden bg-white transition-all ${menu ? 'w-full h-60  z-10 ' : 'w-0'}`}>
-                <div className='flex flex-col text-gray-600  px-5'>
-                    <div onClick={() => setMenu(false)} className='flex items-center gap-4 mt-2 mb-2'>
-                        <RxCross2 className='text-2xl' />
 
+
+            {/* Mobile Menu */}
+            <div className={`md:hidden fixed w-100 inset-0 bg-white z-40 transition-all duration-300 ease-in-out transform ${menu ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className='flex flex-col h-full p-6'>
+                    <div className='flex justify-between items-center mb-8'>
+                        <img className='h-8 w-auto' src={logoImage} alt="LMS Logo" />
+                        <button onClick={closeMenu} className='text-2xl focus:outline-none' aria-label="Close menu"  >
+                            <RxCross2 />
+                        </button>
                     </div>
-                    <NavLink onClick={() => setMenu(false)} to='/' className='border-t border-b py-1 px-1'>Home</NavLink>
-                    <NavLink onClick={() => setMenu(false)} to='/about' className='border-b  py-1 px-1'>About us</NavLink>
-                    <NavLink onClick={() => setMenu(false)} to='/course-list' className='border-b px-1 py-1'>Courses</NavLink>
-                    <NavLink onClick={() => setMenu(false)} to='/contact' className='border-b px-1 py-1'>Contact</NavLink>
 
+                    <div className='flex flex-col space-y-4'>
+                        <NavLink to='/' className='text-lg py-2 px-4 rounded hover:bg-gray-100' onClick={closeMenu} activeClassName="font-semibold text-green-500" >
+                            Home
+                        </NavLink>
+                        <NavLink to='/about' className='text-lg py-2 px-4 rounded hover:bg-gray-100' onClick={closeMenu} activeClassName="font-semibold text-green-500"  >
+                            About us
+                        </NavLink>
+                        <NavLink to='/course-list' className='text-lg py-2 px-4 rounded hover:bg-gray-100' onClick={closeMenu} activeClassName="font-semibold text-green-500"       >
+                            Courses
+                        </NavLink>
+                        <NavLink to='/contact' className='text-lg py-2 px-4 rounded hover:bg-gray-100' onClick={closeMenu} activeClassName="font-semibold text-green-500"   >
+                            Contact
+                        </NavLink>
+                    </div>
+                    <form onSubmit={formHandler} className='mt-8 relative'>
+                        <input  onChange={(e) => setInput(e.target.value)}  value={input}  type="text"  placeholder='What do you want to learn?'  className='w-full border px-4 py-2 pl-10 rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent' />
+                        <CiSearch className='absolute left-3 top-3 text-gray-400' />
+                    </form>
                 </div>
-
             </div>
-            {/* Small Screen Menu End */}
-
 
 
             {/* Input Section for search start */}
-            <form onSubmit={formHandler} className='relative '>
+            <form onSubmit={formHandler} className='hidden relative '>
                 <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Want to learn' className='border px-7 rounded py-1 w-30 border-gray-500  lg:w-70  outline-none shadow-none' />
                 <CiSearch className='absolute ms-2 top-2.5' />
             </form>
@@ -86,13 +103,21 @@ const Navbar = ({ data }) => {
 
 
             {/* Login Navbar */}
-            <div>
-                <ul className='flex items-center gap-4'>
-                    <NavLink to='/cart'><IoCartOutline ></IoCartOutline></NavLink>
-                    <p className='absolute right-[75px] top-[20px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>{cart.length}</p>
-                    <NavLink to='/login' className='cursor-pointer text-sm bg-[#20B486]  text-white px-2 py-2 md:px-3 md:py-1  md:text-base rounded'>Sign in</NavLink>
-
-                </ul>
+            <div className='flex items-center gap-4'>
+                <NavLink to='/cart' className='relative'>
+                    <IoCartOutline className='text-2xl' />
+                    {cart.length > 0 && (
+                        <span className='absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center bg-red-500 text-white text-xs rounded-full'>
+                            {cart.length}
+                        </span>
+                    )}
+                </NavLink>
+                <NavLink
+                    to='/login'
+                    className='hidden sm:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-colors duration-200 text-sm font-medium'
+                >
+                    Sign in
+                </NavLink>
             </div>
         </div>
     );
