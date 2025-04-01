@@ -59,7 +59,7 @@ const Navbar = ({ data }) => {
                         </NavLink>
                     </div>
                     <form onSubmit={formHandler} className='mt-8 relative'>
-                        <input  onChange={(e) => setInput(e.target.value)}  value={input}  type="text"  placeholder='What do you want to learn?'  className='w-full border px-4 py-2 pl-10 rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent' />
+                        <input  onChange={(e) => setInput(e.target.value)}  value={input}  type="text"  placeholder='What do you want to learn?'  className='w-80 border px-4 py-2 pl-10 rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent' />
                         <CiSearch className='absolute left-3 top-3 text-gray-400' />
                     </form>
                 </div>
